@@ -1,0 +1,13 @@
+Sprockets is rack based, which I guess is why everything I've found uses it in a rails engine and serves up the tests in a page
+
+it does let you access things programatically, though.
+So I'm hoping I can hook into it and write out assets into some temp dir before running tests
+Then, I hope I can somehow patch node's require() mechanism to look in that temp dir as well
+
+This sounds totally reasonable and not crazy.
+
+How do I know which assets to write out ahead of time? All of them?
+Probably
+
+Maybe just anything not actually located in the app itself. But importing those app modules in a simpler way than "../../../whatever" would be nice.
+And doing everything is usually easier than just a few things.
