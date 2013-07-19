@@ -1,0 +1,22 @@
+{
+  "name": "coffee-spec-runner",
+  "version": "0.0.1",
+  "author": "Nat Williams <nat.williams@gmail.com",
+  "scripts": {
+    "start": "node ./bin/http-server",
+    "test": "vows --spec --isolate",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "dependencies" : {
+    "chai": "1.7.2",
+    "coffee-script": "1.6.3",
+    "mocha": "1.12.0",
+    "jsdom": "0.7.0",
+    "sinon": "1.7.3",
+    "sinon-chai": "2.4.0"
+  },
+  "engines": {
+    "node": "0.10.15"
+  }
+}
