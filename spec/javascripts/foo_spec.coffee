@@ -1,9 +1,11 @@
-{expect} = require '../spec_helper'
-{check_num} = require '../../app/assets/javascripts/foo'
-# {check_num} = require 'foo' # I want to do this
+require '../spec_helper'
+
+foo = require '../../app/assets/javascripts/foo'
+# foo = require 'foo' # maybe I want to do this?
+$ = require 'jquery'
 
 describe "check_num", ->
   it "accepts 3 as the correct answer", ->
-    expect(check_num(3)).to.equal "you guessed it"
+    expect(foo.check_num(3)).to.equal "you guessed it"
   it "says no for 2", ->
-    expect(check_num(2)).to.equal "no"
+    expect(foo.check_num(2)).to.equal "no"

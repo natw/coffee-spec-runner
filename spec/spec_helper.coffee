@@ -1,6 +1,12 @@
 chai = require 'chai'
 sinonChai = require 'sinon-chai'
 chai.use sinonChai
-expect = chai.expect
+global.expect = chai.expect
 
-module.exports = {expect}
+jsdom = require 'jsdom'
+global.window = jsdom.jsdom().createWindow('<html><body></body></html>')
+global.document = global.window.document
+global.navigator =
+  userAgent: "nodejs"
+  platform: "nodejs"
+  product: "nodejs"
