@@ -13,5 +13,6 @@ namespace :spec do
       asset = env[basename]
       asset.write_to(File.join(tmp_dir, fname.basename.to_s.sub(/(\.js)?\.coffee$/, '.js')))
     }
+    puts `NODE_PATH=./tmp/node node_modules/mocha/bin/mocha spec/javascripts --compilers coffee:coffee-script`
   end
 end

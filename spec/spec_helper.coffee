@@ -1,4 +1,5 @@
 chai = require 'chai'
+global.sinon = sinon = require 'sinon'
 sinonChai = require 'sinon-chai'
 chai.use sinonChai
 global.expect = chai.expect

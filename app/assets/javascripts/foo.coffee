@@ -1,3 +1,5 @@
+$ = require 'jquery'
+
 module.exports =
   check_num:
     (x) ->
@@ -5,3 +7,7 @@ module.exports =
         return 'you guessed it'
       else
         return 'no'
+
+  hide:
+    (selector) ->
+      $(selector).hide()
